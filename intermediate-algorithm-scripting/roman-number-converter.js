@@ -1,12 +1,13 @@
-"use strict";
-
-
 /**
- *
+ * FreeCodeCamp Challenge
+ * -------------------------
  * Converts the given number into a roman numeral.
  *
+ * -------------------------
  * @param num
+ *        the number to be converted in latin form
  * @return {string}
+ *        return in latin form the number received
  */
 
 
