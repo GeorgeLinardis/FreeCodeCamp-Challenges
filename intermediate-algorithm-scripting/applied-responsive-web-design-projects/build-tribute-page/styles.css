@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css?family=Marcellus+SC|Montserrat');
+
+/*************************
+  GENERAL
+**************************/
+html {
+    overflow:hidden;
+}
+body{
+    padding-top:5%;
+    margin:0;
+}
+
+#main {
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+}
+
+/*************************
+  HEADER
+**************************/
+header{
+    font-family: 'Montserrat', sans-serif;
+    text-align:center;
+}
+
+/*************************
+  MOVING IMAGES
+**************************/
+#moving-images{
+    display:flex;
+    flex-direction:column;
+}
+
+.rounded {
+    border-radius:50%;
+    padding:10px;
+    width:70px;
+    height:70px;
+    animation-name:logos;
+    animation-iteration-count:infinite;
+}
+#Virgin-Radio{
+    animation-duration:2.1s
+}
+#Virgin-Records{
+    animation-duration:1.4s
+}
+#Virgin-Galactic{
+    animation-duration:1.7s
+}
+@keyframes logos {
+    from{
+        opacity:0.5;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+/*************************
+  TRIBUTE LIST
+**************************/
+ul{
+    list-style-type:none;
+}
+#tribute-list{
+    display:flex;
+    flex-direction:row;
+    font-size:1.3em;
+    font-family: 'Montserrat', sans-serif;
+    line-height:130%;
+}
+
+/*************************
+  MAIN IMAGE
+**************************/
+#img-div {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+#img-div img{
+    margin-left:30px;
+    max-width:300px;
+    height:200px;
+    border-radius:30% 10% 30% 10%;
+    box-shadow:0 0 30px rgba(0,0,0,0.8)
+}
+#img-div figcaption{
+    color:black;
+    text-align:center;
+}
+
+/*************************
+  BLOCKQUOTE
+**************************/
+blockquote {
+    padding:20px;
+    bottom:0px;
+    color:dark-blue;
+    font-size:20px;
+    text-align:center;
+    font-family:"Marcellus SC";
+}
+blockquote footer a {
+    text-decoration:line;
+    color:white;
+}
+/*************************
+  SMALL SCREENS
+**************************/
+@media screen and (max-width:600px){
+    main{
+        flex-direction:column;
+    }
+    #second{
+        display:flex;
+        flex-direction:row;
+        justify-content:center;
+    }
+    #moving-images{
+        justify-content:space-around;
+        flex-direction:row;
+    }
+    #tribute-list {
+        order:2;
+        font-size:1em;
+    }
+    .rounded {
+        width:50px;
+        height:50px;
+    }
+    #img-div img{
+        width:200px;
+        height:150px;
+    }
+}
