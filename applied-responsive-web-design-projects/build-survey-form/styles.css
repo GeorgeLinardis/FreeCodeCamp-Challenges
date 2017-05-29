@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Bitter');
+
+/*************************
+  GENERAL
+**************************/
+body {
+    background-color:#161515;
+    color:white;
+    font-family:Bitter;
+    font-size:18px;
+}
+
+h1,#description {
+    text-align:center;
+}
+form {
+    margin: 0 auto;
+    width:400px;
+    border: 2px solid white;
+    border-radius:5%;
+    padding:30px;
+}
+
+/*************************
+  INPUT AREAS
+**************************/
+
+input,textarea,select{
+    color:#efefef;
+    background-color:transparent;
+    border: white solid 2px;
+    border-radius:7%;
+    padding:10px;
+    margin:10px;
+    font-size:17px;
+}
+
+select option {
+    background-color:#161515;
+}
+
+/*************************
+  BUTTON
+**************************/
+button{
+    padding:10px;
+    border-radius:8%;
+    font-size:15px;
+    font-weight:italic;
+    background-color:white;
+    border: 3px solid green;
+    color:black;
+    width:250px;
+}
+
+/*************************
+  CENTERING
+**************************/
+.div-centered{
+    text-align:center;
+}
+.centered-checks {
+    margin: 0 0 5% 30%;
+}
+#name-label,#email-label,#number-label {
+    display:inline-block;
+    width:50px;
+}
+#dropdown{
+    margin-left:60px;
+}

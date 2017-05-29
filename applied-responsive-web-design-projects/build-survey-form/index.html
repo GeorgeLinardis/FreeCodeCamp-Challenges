@@ -2,9 +2,55 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Survey Form</title>
 </head>
-<body>
+    <body>
+        <h1 id="title">FreeCodeCamp Survey Form</h1>
+        <p id="description">This is a survey to understand how many crazy-devs are out there!</p>
+        <form id="survey-form">
+            <div>
+                <label for="name" id="name-label">Name</label>
+                <input type="text" id="name" placeholder="What is your name?" required >
+            </div>
+            <div>
+                <label for="email" id="email-label">Email</label>
+                <input type="email" id="email" placeholder="And your email is?"required>
+            </div>
+            <div>
+                <label for="number" id="number-label">Age</label>
+                <input type="number" id="number" placeholder="Age?" required min="10" max="100">
+            </div>
+            <p>How many years are you thirsty for coding?</p>
+            <div>
+                <select name="years-coding" id="dropdown">
+                    <option>1 year</option>
+                    <option>1-3 years</option>
+                    <option>>3 years</option>
+                </select>
+            </div>
+            <p>And what would be your first language?</p>
+            <div class="centered-checks">
+                <input type="radio" name="language" value="C">C<br>
+                <input type="radio" name="language" value="Python">Python<br>
+                <input type="radio" name="language" value="Javascript">Javascript<br>
+            </div>
+            <p>What is your favorite text-editor?</p>
+            <div class="centered-checks">
+                <input type="checkbox" name="favorite-editor" value="Atom">Atom<br>
+                <input type="checkbox" name="favorite-editor" value="Sublime">Sublime<br>
+                <input type="checkbox" name="favorite-editor" value="Notepad">Notepad<br>
+                <input type="checkbox" name="favorite-editor" value="Brackets">Brackets<br>
+                <input type="checkbox" name="favorite-editor" value="Other">Other<br>
+            </div>
+            <label for="quote" id="quote-label">Favorite Quote ?</label><br>
+            <div id="quote" class="div-centered">
+                <textarea id="quote-textarea"></textarea>
+            </div>
+            <div class="div-centered">
+                <button type="submit" id="submit">Submit</button>
+            </div>
+        </form>
 
-</body>
+
+    </body>
 </html>
