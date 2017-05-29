@@ -16,15 +16,12 @@
 "use strict";
 
 function bouncer(arr) {
-    // Don't show a false ID to this bouncer.
-    let results = [];
-    arr.forEach(function(element){
-        if(Boolean(element)){
-            results.push(element);
+
+    return arr.filter(function(element){
+        if (Boolean(element)) {
+            return element;
         }
     });
-    return results;
 }
-
 
 bouncer([7, "ate", "", false, 9]);
