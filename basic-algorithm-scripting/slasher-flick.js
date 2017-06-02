@@ -1,0 +1,28 @@
+/**
+ * FreeCodeCamp Challenge
+ * -------------------------
+ * Return the remaining elements of an array after chopping
+ * off n elements from the head.
+ *
+ * The head means the beginning of the array, or the zeroth index.
+ *
+ *
+ * -------------------------
+ * @param  {Array} arr
+ * @param  {number} howMany
+ *
+ * @return {Array}
+ *        returns an array in which 'howMany' elements
+ *        have been removed from the beginning
+ */
+"use strict";
+
+
+function slasher(arr, howMany) {
+    // it doesn't always pay to be first
+
+    arr.splice(0,howMany);
+    return arr;
+}
+
+slasher([1, 2, 3], 2);
