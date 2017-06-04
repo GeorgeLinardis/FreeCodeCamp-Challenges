@@ -1,11 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+/* Color combinations were found thanx to magoz.is*/
 
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+body {
+    background-color:#008F95;
+}
 .container {
     height:90vh;
     margin:5vh auto;
-    background-color:#f4bb49;
+    background-color:white;
     min-height:300px;
     border-radius:1%;
+    box-shadow:5px 5px 5px #000;
 }
 
 
@@ -15,11 +20,12 @@
     border-radius:1%
 }
 #quote-area {
-    border:23px solid black;
-    color:black;
+    /*   border:23px solid black; */
+    color:white;
     font-family: 'Roboto Slab', serif;
-    font-size:1.3rem;
-    background:white;
+    font-size:1.7rem;
+    background:#E24E42;
+    box-shadow:5px 5px 5px #000;
 }
 
 .small {
@@ -29,6 +35,7 @@
 
 #twitter-button {
     width:60px;
+
 }
 
 .vAlign {
@@ -42,13 +49,12 @@ blockquote {
 }
 
 #imageWriter-area {
-    background:white;
     height:40vh;
     display:flex;
     align-items:center;
     justify-content:center;
-    border:23px solid black;
     border-radius:2%;
+
 }
 
 #imageWriter {
