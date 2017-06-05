@@ -1,0 +1,249 @@
+*{
+    margin:0;
+}
+body{
+    background:#dfffd8;
+    font-family:Arial;
+}
+
+/*************************
+  HEADER
+**************************/
+header {
+    display:flex;
+    position:fixed;
+    top:0; /* if you forget about you 're gonna be in trouble */
+    background-color:black;
+    border-bottom:3px solid green;
+}
+
+#img-div {
+    display:flex;
+    align-items:center;
+    width:70vw;
+    padding-left:10px;
+}
+
+#header-img {
+    height:30px;
+    width:300px;
+}
+
+/*************************
+  NAVIGATION BAR
+**************************/
+nav {
+    width:30vw;
+    height:60px;
+    display:flex;
+    align-items:center;
+
+}
+#nav-link{
+    width:100%;
+    padding:10px;
+    display:flex;
+    justify-content:space-around;
+}
+#nav-link li {
+    list-style:none;
+}
+#nav-link a {
+    color:white;
+    font-family:Arial;
+    font-size:16px;
+    text-decoration:none;
+}
+
+/*************************
+ VIDEO
+**************************/
+#video-section {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    font-family:Arial;
+    font-size:18px;
+    line-height:150%;
+}
+#video-section h1{
+    margin-top:20px;
+}
+
+#video-section ul{
+    margin:20px;
+}
+#video{
+    margin-top:50px;
+}
+
+@media (max-width:1100px){
+    #video{
+        height:100px;
+        width:100px;
+    }
+}
+iframe {
+    border-right:groove green 10px;
+    border-left:groove green 10px;
+}
+/*************************
+ FORM
+**************************/
+#form-section h2 {
+    text-align:center;
+    margin:10px;
+}
+#form-section {
+    display:flex;
+    flex-direction:column;
+
+}
+#form {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+#email,#submit{
+    padding:5px;
+    margin:10px;
+}
+#email {
+    width:200px;
+    padding:10px;
+    border-radius:3%;
+    border:1px solid black;
+}
+#submit {
+    padding:6px;
+    height:30px;
+    width:100px;
+    border-radius:5%;
+    background-color:white;
+    border:1px solid green;
+    color:green;
+    font-famliy:Arial;
+    font-size:15px;
+}
+#submit:hover {
+    color:white;
+    background-color:green;
+    border:green;
+    transform:scale(1.1,1.1);
+}
+
+/*************************
+ TOPICS
+**************************/
+#topics h2 {
+    padding:10px;
+    text-align:center;
+    border-bottom:solid 2px green;
+}
+#topics {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+#shapes {
+    display:flex;
+    margin:30px;
+}
+#shapes div {
+    margin:30px;
+}
+
+#first-shape{
+    position:relative;
+    width:0px;
+    height:0px;
+    border:100px solid transparent;
+    border-bottom-color:orange;
+    top:-100px;
+}
+#first-shape:before {
+    content:"";
+    width:0px;
+    height:0px;
+    position:absolute;
+    border:100px solid transparent;
+    border-top-color: #E74900;
+    top:100px;
+    left:-100px;
+}
+
+#third-shape{
+    position:relative;
+    width:0px;
+    height:0px;
+    border:100px solid transparent;
+    border-bottom-color:#69B23F;
+    top:-100px;
+}
+#third-shape:before {
+    content:"";
+    width:0px;
+    height:0px;
+    position:absolute;
+    border:100px solid transparent;
+    border-top-color: #69603F;
+    top:100px;
+    left:-100px;
+}
+#third-shape p {
+    font-family:Arial;
+    font-weight:bold;
+    color:white;
+    font-size:30px;
+    position:absolute;
+    top:80px;
+    right:-60px;
+}
+
+.triangle p {
+    font-family:Arial;
+    font-weight:bold;
+    color:white;
+    font-size:30px;
+    position:absolute;
+    top:80px;
+    left:-40px;
+}
+
+.rounded-square{
+    position:relative;
+    top:25px;
+    width:150px;
+    height:150px;
+    border-radius:15%;
+}
+.rounded-square p {
+    font-family:Arial;
+    font-weight:bold;
+    color:white;
+    font-size:30px;
+    width:150px;
+    height:150px;
+    position:relative;
+    top:35%;
+    text-align:center;
+}
+#second-shape{
+    background-color:#389ABE;
+}
+#fourth-shape{
+    background-color:#E44C25;
+}
+
+#video-section{
+    margin-top:100px;
+    height:600px;
+}
+#form {
+    margin-top:40px;
+    height:220px;
+}
+#topics {
+    height:180px;
+}
+
