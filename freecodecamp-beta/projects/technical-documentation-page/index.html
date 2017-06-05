@@ -1,0 +1,66 @@
+<nav id="navbar">
+    <header>HTML</header>
+    <a class="nav-link" href="#What_is_HTML">What is HTML</a>
+    <a class="nav-link" href="#Anatomy_of_an_HTML_element">Anatomy of an HTML element</a>
+    <a class="nav-link" href="#Block_versus_inline_elements">Block versus inline elements</a>
+    <a class="nav-link" href="#Lists">Lists</a>
+    <a class="nav-link" href="#Emphasis">Emphasis</a>
+</nav>
+<main id="main-doc">
+    <section class="main-section box" id="What_is_HTML">
+        <header>What is HTML</header>
+        <p>HTML (HyperText Markup Language) is not a programming language; it is a markup language, used to tell your browser how to structure the webpages you visit. It can be as complicated or as simple as the web developer wishes it to be. HTML consists of a series of elements, which you use to enclose, wrap, or mark up different parts of the content to make it appear a certain way, or act a certain way. The enclosing tags can make a bit of content into a hyperlink to link to another page on the Web, italicize words, and so on.  For example, take the following line of content:</p>
+    </section>
+    <section class="main-section" id="Anatomy_of_an_HTML_element">
+        <header>Anatomy of an HTML element</header>
+        <p>The main parts of our element are:</p>
+        <ul>
+            <li><b>The opening tag:</b> This consists of the name of the element (in this case, p), wrapped in opening and closing angle brackets. This states where the element begins, or starts to take effect — in this case where the start of the paragraph is.</li>
+            <li><b>The closing tag:</b> This is the same as the opening tag, except that it includes a forward slash before the element name. This states where the element ends — in this case where the end of the paragraph is. Failing to include a closing tag is a common beginner error, and can lead to strange results.</li>
+            <li><b>The content:</b> This is the content of the element, which in this case is just text.</li>
+            <li><b>The element:</b> The opening tag, plus the closing tag, plus the content, equals the element.</li>
+        </ul>
+        <code>&lt;p&gt; My cat is very grumpy &lt;/p&gt;</code>
+    </section>
+    <section class="main-section" id="Block_versus_inline_elements">
+        <header>Block versus inline elements</header>
+        <p>There are two important categories of elements in HTML, which you should know about — block level elements and inline elements.</p>
+        <ul>
+            <li>Block level elements form a visible block on a page — they will appear on a new line from whatever content went before it, and any content that goes after it will also appear on a new line. Block level elements tend to be structural elements on the page that represent e.g. paragraphs, lists, navigation menus, footers, etc. A block level element wouldn't be nested inside an inline element, but it might be nested inside another block level element.</li>
+            <li>Inline elements are those that are contained within block level elements and surround only small parts of the document’s content, not entire paragraphs and groupings of content. An inline element will not cause a new line to appear in the document: they would normally appear inside a paragraph of text, for example an <a> element (hyperlink) or emphasis elements such as &lt;em&gt; or &lt;strong&gt;.</li>
+        </ul>
+        <p>Take the following example:</p>
+        <code>&lt;em&gt;first&lt;/em&gt; &lt;em&gt;second&lt;/em&gt; &lt;em&gt;third&lt;/em&gt;  &lt;p&gt;fourth&lt;/p&gt; &lt;p&gt;fifth&lt;/p&gt; &lt;p&gt;sixth&lt;/p&gt; </code>
+        <p> &lt;em&gt; is an inline element, so as you can see below, the first three elements sit on the same line as one another with no space in between. &lt;p&gt; on the other hand is a block level element, so each element appears on a new line, with space above and below each (the spacing is due to default CSS styling that the browser applies to paragraphs).</p>
+    </section>
+    <section class="main-section" id="Lists">
+        <header>Lists</header>
+        <p>Now let's turn our attention to lists. Lists are everywhere in life — from your shopping list to the list of directions you subconsciously follow to get to your house every day, to the lists of instructions you are following in these tutorials! Lists are everywhere on the Web too, and we've got three different types to worry about.</p>
+        <h3>Unordered</h3>
+        <code>
+            <ul>
+                <li>Element 1 of unorderded list</li>
+                <li>Element 2 of unorderded list</li>
+            </ul>
+        </code>
+        <p>Unordered lists are used to mark up lists of items for which the order of the items doesn't matter.</p>
+        <h3>Ordered</h3>
+        <code>
+            <ol>
+                <li>Element 1 of orderded list</li>
+                <li>Element 2 of orderded list</li>
+            </ol>
+        </code>
+        <p>Ordered lists are lists in which the order of the items does matter — let's take a set of directions as an example:</p>
+    </section>
+    <section class="main-section" id="Emphasis">
+        <header>Emphasis</header>
+        <p>When we want to add emphasis in spoken language, we stress certain words, subtly altering the meaning of what we are saying. Similarly, in written language we tend to stress words by putting them in italics. For example, the following two sentences have different meanings.</p>
+        <code>I am glad you weren't late.<br> I am <em>glad</em> you weren't late.</code>
+        <p>The first sentence sounds genuinely relieved that the person wasn't late. In contrast, the second one sounds sarcastic or passive-aggressive, expressing annoyance that the person arrived a bit late.</p>
+    </section>
+
+</main>
+<section id="references">
+    <p>All material for this challenge has been copied from <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started" target="_blank">Mozilla Network - Introduction to HTML</a></p>
+</section>
