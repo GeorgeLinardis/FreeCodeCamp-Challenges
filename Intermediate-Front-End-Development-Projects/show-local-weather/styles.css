@@ -1,5 +1,68 @@
-$background-color:darkblue;
+@import url('https://fonts.googleapis.com/css?family=Bubbler+One');
+
+* {
+  margin:0px;
+  padding:0px;
+}
 
 body{
-  background-color: $background-color;
+  background-size:cover;
+  background-position:center center;
+  color:white;
+  font-size:30px;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+#weather {
+  height:400px;
+  width:400px;
+  border-radius:10%;
+  display:flex;
+  flex-direction:column;
+  align-items:left;
+  z-index:2;
+  color:black;
+}
+
+#weather::before {
+  content:"";
+  background-color:#FFF;
+  height:450px;
+  width:450px;
+  position:fixed;
+  top:25vh;
+  opacity:0.3;
+  z-index:-1;
+  border-radius:10%;
+}
+#city-name {
+  padding:40px;
+  font-size:1.3em;
+}
+
+#temp {
+  padding:40px;
+  display:flex;
+  align-items:flex-start;
+  font-size:5em;
+  font-family :"Bubbler one";
+}
+#weather-icon{
+  padding-left:50px;
+  width:100px;
+  height:100px;
+
+}
+#temperature {
+  width:200px;
+}
+#temp-sign {
+  position:relative;
+  left:20px;
+  font-size:0.2em;
+  color:white;
+  margin:0;
 }
