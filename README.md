@@ -35,30 +35,14 @@ HTML5 and CSS (5 hours)
     - [ ] Build a Wikipedia Viewer Incomplete   
     
     - [ ] Use the Twitch.tv JSON API Incomplete   
-
 - [x] Intermediate Algorithm Scripting(50 hours)
+    - [ ] Advanced Front End Development Projects(150 hours)
+    - [ ] Build a JavaScript Calculator Incomplete  
+    - [ ] Build a Pomodoro Clock Incomplete     
+    - [ ] Build a Tic Tac Toe Game Incomplete    
+    - [ ] Build a Simon Game Incomplete   
 
-  - [ ]   Advanced Algorithm Scripting(50 hours)
-    
-  - [ ]   Validate US Telephone Numbers Incomplete
-    
-  - [ ]   Record Collection Incomplete
-    
-  - [ ]   Symmetric Difference Incomplete
-    
-  - [ ]   Exact Change Incomplete
-    
-  - [ ]   Inventory Update Incomplete
-    
-  - [ ]   No repeats please Incomplete
-    
-  - [ ]   Make a Person Incomplete
-    
-  - [ ]   Map the Debris Incomplete
-    
-  - [ ]   Pairwise Incomplete
-
-- [ ] Advanced Front End Development Projects(150 hours)
+- [ ] Claim Your Front End Development Certificate
 
 
 
