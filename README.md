@@ -36,7 +36,7 @@ HTML5 and CSS (5 hours)
     
     - [ ] Use the Twitch.tv JSON API Incomplete   
 - [x] Intermediate Algorithm Scripting(50 hours)
-    - [ ] Advanced Front End Development Projects(150 hours)
+- [ ] Advanced Front End Development Projects(150 hours)
     - [ ] Build a JavaScript Calculator Incomplete  
     - [ ] Build a Pomodoro Clock Incomplete     
     - [ ] Build a Tic Tac Toe Game Incomplete    
