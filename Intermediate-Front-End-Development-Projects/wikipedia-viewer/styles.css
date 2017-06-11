@@ -1,0 +1,56 @@
+body {
+    background-color:	#4B0082;
+}
+
+.container {
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+}
+
+#main-content {
+    border:solid green 2px;
+    padding:0px;
+}
+
+#main-area {
+    height:200px;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+}
+#main-area .row {
+    display:flex;
+    align-content:center;
+    justify-content:center;
+    width:100%;
+}
+#main-area form{
+    display:flex;
+    justify-content:space-around;
+}
+
+
+#search-photo {
+    position:relative;
+    top:20px;
+    left:30px;
+    width:200px;
+}
+
+.btn {
+    width:100px;
+}
+
+
+@media screen and (max-width:769px){
+    #search-photo {
+        display:none;
+
+    }
+
+
+}
