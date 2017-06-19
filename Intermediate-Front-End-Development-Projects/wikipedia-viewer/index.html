@@ -5,21 +5,29 @@
     <link rel="stylesheet" type="text/css" href="./styles.css">
 </head>
 <body>
-<div class="container" id="main-container">
+<div class="container-fluid main-container-middle" id="main-container">
     <div class="row" id="main-content">
         <div class="col-md-9 col-sm-12" id="main-area">
             <div class="row">
                 <button class="btn btn-warning" id="button-random">Random</button>
-                <input type="text" class="form-control" id="text-input" placeholder="Ask me">
+                <input type="text" id="text-input" placeholder="Ask me">
                 <button class="btn btn-warning" id="button-search">Search</button>
             </div>
         </div> <!-- main-area -->
         <div class="col-sm-3" id="photo-area">
-            <img src="#" alt="search-photo" id="search-photo">
+            <img src="https://www.dropbox.com/s/uoxk5jnuhbc9hdu/search-by-pixabay.png?raw=1" alt="search-photo" id="search-photo">
         </div>
     </div>
-    </div> <!-- row -->
-</div> <!-- container -->
+    <div class="row" >
+        <div class="col-md-9" id="query-results">
+            <ul id="query-list">
+            </ul>
+        </div>
+        <div class="col-sm-3">
+            <p id="result-description"></p>
+        </div>
+    </div>
+</div><!-- container -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="code.js"></script>
 </body>
