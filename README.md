@@ -32,7 +32,7 @@ HTML5 and CSS (5 hours)
     
     - [x] Show the Local Weather Complete   
     
-    - [ ] Build a Wikipedia Viewer Incomplete   
+    - [x] Build a Wikipedia Viewer Incomplete   
     
     - [ ] Use the Twitch.tv JSON API Incomplete   
 - [x] Intermediate Algorithm Scripting(50 hours)
