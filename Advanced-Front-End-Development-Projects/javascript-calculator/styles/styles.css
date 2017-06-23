@@ -1,0 +1,101 @@
+body {
+    background-color:red;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+}
+
+#calculator {
+    background-color:#CFCDEF;
+    border-radius: 5% 5% 20% 20%;
+    height:600px;
+    width:500px;
+
+}
+
+#screen-area {
+    width:100%;
+    border-radius: inherit;
+    background-color: #101C36;
+    height:40%;
+}
+#screen-area p {
+    position:relative;
+    top:30%;
+    left:35%;
+    font-size:0.7em;
+    color:#f5f4ff;
+}
+
+#outer-screen-border {
+    position:relative;
+    border-radius: 2%;
+    top:25%;
+    left:10%;
+    width:80%;
+    height:50%;
+    background-color: #f5f4ff;
+}
+
+#inner-screen {
+    position:relative;
+    border: 2px solid black;
+    border-radius: inherit;
+    box-shadow: 2px 2px #222 inset ;
+    top:5%;
+    left:5%;
+    width:90%;
+    height:90%;
+    background-color: #f0ffed;
+}
+#button-area {
+    position:relative;
+    z-index: 1;
+    top:-1%;
+    left:10%;
+    width:80%;
+    height:55%;
+    border-radius: 0 0 20% 20% ;
+    background-color:#f5f4ff;
+
+}
+
+
+#number-buttons {
+    padding:0;
+    width:60%;
+    height: 80%;
+    position:relative;
+    top:5%;
+    left:10%;
+
+}
+
+.num-btn {
+    position:relative;
+    padding:0;
+    margin:2px;
+    width:65px;
+    height:65px;
+    background-color:#2d2c2c;
+    color:lightgrey;
+    font-size:25px;
+    border:none;
+    border-radius: 5%;
+    outline:none;
+}
+
+.black-shadows {
+    box-shadow: 1px 1px 27px black inset;
+}
+
+.btn-clicked {
+    margin:2.5px;
+    width:64px;
+    height:64px;
+    color:white;
+
+    box-shadow: 1px 1px 12px black inset;
+
+}
