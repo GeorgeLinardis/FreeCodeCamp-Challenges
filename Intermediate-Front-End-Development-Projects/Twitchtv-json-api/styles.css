@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster|Quicksand');
+
+* {
+    padding:0;
+    margin:0;
+}
+body {
+    background-image:url("https://www.dropbox.com/s/abmnfyccnueewc5/black_tile.jpg?raw=1");
+
+}
+
+.row {
+    display:flex;
+    align-items: center;
+    height:100vh;
+}
+
+/*************************
+*  List section
+**************************/
+
+#users-list {
+    height:70vh;
+    list-style-type: none;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#users-list a {
+    display:flex;
+    align-items: center;
+    margin:5px;
+    width:90%;
+    border-radius: 2%;
+}
+
+#users-list img {
+    height:30px;
+    width:30px;
+    border-radius: 30%;
+    padding:5px;
+    margin-right:20px;
+}
+
+
+/*************************
+*  Description section
+**************************/
+#analyze-user {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+
+}
+
+#user-logo {
+    width: 60px;
+    height:60px;
+    margin-bottom: 20px;
+    border-radius:5%;
+}
+#user-data {
+    width:100%;
+}
+
+#user-status{
+    font-family: 'Lobster', cursive;
+    font-size:25px;
+    color:white;
+    height:70px;
+    padding:10px;
+    text-align: center;
+}
+
+#user-description{
+    font-family: 'Quicksand', sans-serif;
+    padding:10px;
+    height:200px;
+    color:white;
+    font-size:16px;
+    text-align: center;
+}
+
