@@ -14,10 +14,10 @@ User stories that are challenge requirements:
 
 Here is a preview..
 
-![Wiki search](twitch-preview.PNG)
+![Wiki search](images/calc-preview.PNG)
 
 
-You can see code live in [Codepen](https://codepen.io/GeorgeLin/pen/awyOyG).
+You can see code live in [Codepen](https://codepen.io/GeorgeLin/pen/YQrroM).
 
 Keep coding,
 

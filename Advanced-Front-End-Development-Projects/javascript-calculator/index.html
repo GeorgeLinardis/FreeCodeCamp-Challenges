@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Javascript Calculator</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link type="text/css" rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
@@ -11,11 +10,12 @@
     <section id="screen-area">
         <div id="outer-screen-border">
             <div id="inner-screen">
-                <div id="number-clicked">
-                    <p>65</p>
+                <div id="calculation-type"></div>
+                <div id="number-clicked-area">
+                    <p id="number-to-enter"></p>
                 </div>
-                <div id="number-history">
-                    <p>65+73</p>
+                <div id="calculation-history-area">
+                    <p id="calculation-history-num"></p>
                 </div>
             </div>
         </div>
@@ -24,39 +24,39 @@
     <section id="button-area">
         <div id="number-buttons">
             <div id="first-row">
-                <button class="num-btn black-shadows">7</button>
-                <button class="num-btn black-shadows">8</button>
-                <button class="num-btn black-shadows">9</button>
+                <button class="btn num-btn black-shadows">7</button>
+                <button class="btn num-btn black-shadows">8</button>
+                <button class="btn num-btn black-shadows">9</button>
             </div>
             <div id="second-row">
-                <button class="num-btn black-shadows">4</button>
-                <button class="num-btn black-shadows">5</button>
-                <button class="num-btn black-shadows">6</button>
+                <button class="btn num-btn black-shadows">4</button>
+                <button class="btn num-btn black-shadows">5</button>
+                <button class="btn num-btn black-shadows">6</button>
             </div>
             <div id="third-row">
-                <button class="num-btn black-shadows">1</button>
-                <button class="num-btn black-shadows">2</button>
-                <button class="num-btn black-shadows">3</button>
+                <button class="btn num-btn black-shadows">1</button>
+                <button class="btn num-btn black-shadows">2</button>
+                <button class="btn num-btn black-shadows">3</button>
             </div>
             <div id="fourth-row">
-                <button class="num-btn black-shadows">0</button>
-                <button class="num-btn black-shadows">.</button>
-                <button class="num-btn black-shadows">%</button>
+                <button class="btn num-btn black-shadows">0</button>
+                <button class="btn num-btn black-shadows">.</button>
+                <button class="btn num-btn black-shadows">%</button>
             </div>
         </div>
         <div id="calculation-buttons">
             <div id="calc-first-row">
-                <button class="calc-btn ">&divide;</button>
-                <button class="calc-btn " >&times;</button>
+                <button class="btn calc-btn ">&divide;</button>
+                <button class="btn calc-btn " >&times;</button>
             </div>
             <div id="calc-second-row">
-                <button class="calc-btn" id="calc-btn-plus">&plus;</button>
-                <button class="calc-btn" id="calc-btn-minus" >&minus;</button>
-                <button class="calc-btn" id="calc-btn-equals" >&equals;</button>
+                <button class="btn calc-btn" id="calc-btn-plus">&plus;</button>
+                <button class="btn calc-btn" id="calc-btn-minus" >-</button>
+                <button class="btn calc-btn" id="calc-btn-equals" >&equals;</button>
             </div>
             <div id="calc-third-row">
-                <button class="calc-btn clear-buttons">AC</button>
-                <button class="calc-btn clear-buttons" >C</button>
+                <button class="btn calc-btn clear-buttons">AC</button>
+                <button class="btn calc-btn clear-buttons" >C</button>
             </div>
 
         </div>
