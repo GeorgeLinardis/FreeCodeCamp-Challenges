@@ -6,17 +6,31 @@
 </head>
 <body>
 <main class="row">
-    <div class="col-sm-4 col-xs-6" id="battery-area">
+    <div class="col-sm-3 col-xs-6" id="battery-area">
         <section id="battery">
             <div id="battery-head"></div>
         </section>
     </div>
-    <div class="col-sm-6 col-xs-6" id="timers-area">
-        <section id="countdown-area"></section>
-        <section id="break-area"></section>
+    <div class="col-sm-6 col-xs-6" id="clocks-area">
+        <h1 id="work-title">Wanna work?</h1>
+        <section id="work-clock-area">
+                <button class="btn btn-danger" id="work-clock-minus-btn"><span class="glyphicon glyphicon-download"></span></button>
+                <div class="clock-body" id="work-clock-body">
+                    <p>25:00</p>
+                </div>
+                <button class="btn btn-success" id="work-clock-plus-btn"><span class="glyphicon glyphicon-upload"></span></button>
+        </section>
+        <h1 id="break-title">Relax time</h1>
+        <section id="break-clock-area">
+            <button class="btn btn-danger" id="break-clock-minus-btn"><span class="glyphicon glyphicon-download"></span></button>
+            <div class="clock-body" id="break-clock-body">
+                <p>10:00</p>
+            </div>
+            <button class="btn btn-success" id="break-clock-plus-btn"><span class="glyphicon glyphicon-upload"></span></button>
+        </section>
 
     </div>
-    <div class="col-sm-2 hidden-xs" id="light-area">
+    <div class="col-sm-3 hidden-xs" id="light-area">
         <section id="light">
             <div id="red-light"></div>
             <div id="orange-light"></div>
