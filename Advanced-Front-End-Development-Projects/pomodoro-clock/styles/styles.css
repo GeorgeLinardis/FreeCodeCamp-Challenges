@@ -1,0 +1,157 @@
+body {
+    /*background-image:url("https://www.dropbox.com/s/abmnfyccnueewc5/black_tile.jpg?raw=1");*/
+}
+
+main {
+    background-color:midnightblue;
+    height:100vh;
+
+}
+
+.col-sm-6,.col-sm-4,.col-sm-2{
+    height:70vh;
+    border:1px solid black;
+    position:relative;
+    top:20%;
+}
+
+/*************************
+*  BATTERY - AREA
+**************************/
+
+#battery-area {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#battery {
+    width:180px;
+    height:350px;
+    border:3px solid silver;
+    box-shadow:2px 2px 15px black;
+    background: repeating-linear-gradient(
+            0deg,
+            red,
+            #ff7200,
+            #ffff00,
+            #90ff00,
+            #00ff04,
+            #21FF00
+
+    )
+}
+
+#battery-head {
+    width:45px;
+    height:20px;
+    position:relative;
+    left:65px;
+    top:-20px;
+    border:1px solid silver;
+    background-color: silver;
+    box-shadow:1px 1px 5px black inset;
+}
+
+/*************************
+*  LIGHT - AREA
+**************************/
+
+#light-area {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#light {
+    background-color:black;
+    width:110px;
+    height:350px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20%;
+    border:4px solid grey;
+}
+#light div {
+    border-radius: 50%;
+    height:60px;
+    width:60px;
+    box-shadow: 1px 4px 10px black inset;
+}
+
+#green-light {
+    background: repeating-linear-gradient(
+        90deg,
+        #31ff00,
+        #13f92e 5px,
+        #31ff00 5px,
+        #13f92e 5px,
+        #31ff00 5px,
+        #13f92e 5px,
+        #31ff00 5px,
+        #13f92e 5px,
+        #31ff00 5px,
+        #13f92e 5px,
+        #31ff00 5px,
+        #13f92e 5px,
+        #31ff00 5px
+    )
+}
+
+#orange-light {
+      background: repeating-linear-gradient(
+      90deg,
+      #ff9d00,
+      #fc872d 5px,
+      #ff9d00 5px,
+      #fc872d 5px,
+      #ff9d00 5px,
+      #fc872d 5px,
+      #ff9d00 5px,
+      #fc872d 5px,
+      #ff9d00 5px,
+      #fc872d 5px,
+      #ff9d00 5px,
+      #fc872d 5px
+        );
+    margin: 10px 0 10px  0;
+}
+
+#red-light {
+    background: repeating-linear-gradient(
+            90deg,
+            red,
+            #f20202 5px,
+            red 5px,
+            #f20202 5px,
+            red 5px,
+            #f20202 5px,
+            red 5px,
+            #f20202 5px,
+            red 5px,
+            #f20202 5px,
+            red 5px,
+            #f20202 5px,
+            red 5px
+    )
+}
+
+/*************************
+*  TIMER-BREAK - AREA
+**************************/
+#timers-area {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+section {
+    border:solid 2px black;
+    height:200px;
+    width:400px;
+
+}
