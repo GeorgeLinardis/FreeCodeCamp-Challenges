@@ -31,7 +31,7 @@ HTML5 and CSS (5 hours)
 - [x] Intermediate Algorithm Scripting(50 hours)
 - [ ] Advanced Front End Development Projects(150 hours)
     - [x] Build a JavaScript Calculator Incomplete  
-    - [ ] Build a Pomodoro Clock Incomplete     
+    - [x] Build a Pomodoro Clock Incomplete     
     - [ ] Build a Tic Tac Toe Game Incomplete    
     - [ ] Build a Simon Game Incomplete   
 
