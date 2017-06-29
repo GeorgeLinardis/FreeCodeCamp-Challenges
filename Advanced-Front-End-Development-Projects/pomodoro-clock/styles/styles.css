@@ -2,7 +2,7 @@
 
 main {
     height:100vh;
-    background-image:url("https://www.dropbox.com/s/taob7ylr4dvn8e3/runner.jpeg?raw=1");
+    background-color: black;
     background-position: center center;
     background-size: cover;
 }
@@ -41,6 +41,16 @@ main {
     )
 }
 
+#battery-charging {
+    background-color:black;
+    /*height:344px; 344px;*/
+    height:0;
+    width:155px;
+    position:relative;
+    top:-20px;
+
+}
+
 #battery-head {
     width:45px;
     height:20px;
@@ -64,7 +74,7 @@ main {
 }
 
 #light {
-    background-image:url("https://www.dropbox.com/s/abmnfyccnueewc5/black_tile.jpg?raw=1");
+    background-color:black;
     width:110px;
     height:350px;
     display:flex;
@@ -83,7 +93,7 @@ main {
     box-shadow: 1px 4px 10px black inset;
 }
 
-#green-light {
+.green-light {
     background: repeating-linear-gradient(
         90deg,
         #31ff00,
@@ -102,7 +112,7 @@ main {
     )
 }
 
-#orange-light {
+.orange-light {
       background: repeating-linear-gradient(
       90deg,
       #ff9d00,
@@ -121,7 +131,7 @@ main {
     margin: 10px 0 10px  0;
 }
 
-#red-light {
+.red-light {
     background: repeating-linear-gradient(
             90deg,
             red,
@@ -140,6 +150,23 @@ main {
     )
 }
 
+.no-light {
+    background:repeating-linear-gradient(
+            90deg,
+            #3f3f3f,
+            #332e2e 5px,
+            #3f3f3f 5px,
+            #332e2e 5px,
+            #3f3f3f 5px,
+            #332e2e 5px,
+            #3f3f3f 5px,
+            #332e2e 5px,
+            #3f3f3f 5px,
+            #332e2e 5px
+            );
+    margin: 0 0 10px  0;
+}
+
 /*************************
 *  TIMER-BREAK - AREA
 **************************/
@@ -152,15 +179,11 @@ main {
 }
 
 #clocks-area h1 {
-    width:330px;
+    width:340px;
     height:70px;
     text-align: center;
-    position:relative;
-    top:20px;
     font-size:4em;
-    color: white;
     border: 2px solid white;
-    background-color: #690b77;
     border-radius: 10px;
     font-family: 'Fresca', sans-serif;
 }
@@ -201,4 +224,59 @@ main {
     outline:none !important;
 }
 
+.default-style {
+    color:white;
+    background-color: #690b77;
+}
 
+#work-title:hover {
+    color: #690b77;
+    background-color: white;
+    cursor: pointer;
+}
+
+.reset-all {
+    color:white;
+    background-color:red;
+    cursor:pointer;
+}
+
+
+/*********************************
+MEDIA
+*********************************/
+
+@media screen and (max-width:600px),screen and (max-height:500px){
+
+    /*************************
+    *  TIMER-BREAK - AREA
+    **************************/
+    #clocks-area {
+        justify-content: center;
+    }
+
+    #clocks-area h1 {
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        width:240px;
+        height:40px;
+        font-size:2em;
+    }
+
+    #clocks-area section {
+        height:100px;
+        width:300px;
+    }
+
+    #work-clock-body,#break-clock-body{
+        font-size:22px;
+    }
+    .clock-body {
+        background:black;
+        width:100px;
+        height:50px;
+        border:solid 2px white;
+        border-radius:10%;
+    }
+}

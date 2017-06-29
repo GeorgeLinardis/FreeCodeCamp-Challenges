@@ -9,22 +9,23 @@
     <div class="col-sm-3 col-xs-6" id="battery-area">
         <section id="battery">
             <div id="battery-head"></div>
+            <div id="battery-charging"></div>
         </section>
     </div>
     <div class="col-sm-6 col-xs-6" id="clocks-area">
-        <h1 id="work-title">Wanna work?</h1>
+        <h1 id="work-title" class="default-style">Wanna work?</h1>
         <section id="work-clock-area">
                 <button class="btn btn-danger" id="work-clock-minus-btn"><span class="glyphicon glyphicon-download"></span></button>
                 <div class="clock-body" id="work-clock-body">
-                    <p>25:00</p>
+                    <p><span id="work-minutes"></span>:<span id="work-seconds">00</span></p>
                 </div>
                 <button class="btn btn-success" id="work-clock-plus-btn"><span class="glyphicon glyphicon-upload"></span></button>
         </section>
-        <h1 id="break-title">Relax time</h1>
+        <h1 id="break-title" class="default-style">Relax time</h1>
         <section id="break-clock-area">
             <button class="btn btn-danger" id="break-clock-minus-btn"><span class="glyphicon glyphicon-download"></span></button>
             <div class="clock-body" id="break-clock-body">
-                <p>10:00</p>
+                <p><span id="break-minutes"></span>:<span id="break-seconds">00</span></p>
             </div>
             <button class="btn btn-success" id="break-clock-plus-btn"><span class="glyphicon glyphicon-upload"></span></button>
         </section>
@@ -32,9 +33,9 @@
     </div>
     <div class="col-sm-3 hidden-xs" id="light-area">
         <section id="light">
-            <div id="red-light"></div>
-            <div id="orange-light"></div>
-            <div id="green-light"></div>
+            <div id="top-light" class="no-light"></div>
+            <div id="middle-light" class="no-light"></div>
+            <div id="bottom-light" class="no-light green-light"></div>
         </section>
     </div>
 
@@ -43,6 +44,7 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="js/moment.js" ></script>
 <script src="js/basic.js"></script>
 </body>
 
