@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Molle:400i,Acme');
+
+body {
+    background-color:lightgreen;
+    margin:0;
+}
+
+main {
+    height:90vh;
+}
+
+h1 {
+    color:red;
+    font-family: 'Molle', cursive;
+    margin-top:10vh;
+    text-align: center;
+    font-size: 3.5em;
+}
+
+#game-area {
+    background-color:darkorange;
+    height:200px;
+    position:relative;
+    top:10%;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+/*******************************
+    BOARD
+********************************/
+
+#board {
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    height:300px;
+    width:300px;
+    background-color: #2b2a2a;
+    border-radius:5%;
+}
+
+
+/*******************************
+    SCORES
+********************************/
+
+.score-result {
+    background-color:yellow;
+    height:100px;
+    width:100px;
+    border-radius: 5%;
+}
+
+.score-result p {
+    margin:0;
+}
+
+.participant-title {
+    font-family:"Acme", sans-serif;
+    font-size:15px;
+    background-color:red;
+    width:80px;
+    height:23px;
+    position:relative;
+    top:-28px;
+    left:10px;
+    border-radius:10px 10px 0 0 ;
+    color:white;
+    text-align: center;
+    padding-top:5px;
+}
+
+.participant-score p {
+    font-size: 50px;
+    text-align: center;
+    margin-top:-7px;
+    color:#2b2a2a;
+    font-family: "Acme", sans-serif;
+}
+/*******************************
+    TILES
+********************************/
+
+.row-tile {
+    border-radius: 5%;
+    width:270px;
+    height:80px;
+    margin: 5px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:center;
+
+}
+
+.tile {
+    border-radius:inherit;
+    width:75px;
+    height:75px;
+    background-color:#2b2a2a;
+    border:1px solid white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tile p {
+    color:white;
+    margin:0;
+    font-size:50px;
+    font-family:"Acme", sans-serif;
+}
+
+.win-tile {
+    background-color: #00FF00;
+}
+
+.selected-tile {
+    border-color: #13f92e;
+}
+
+
+
