@@ -4,39 +4,45 @@
     <link rel="stylesheet" href="styles/styles.css" type="text/css">
 </head>
 <body>
-<div id="make-choice"></div>
 <main>
     <h1>Tic Tac Toe</h1>
     <section id="game-area">
         <div class="score-result" id="player-score">
-            <div class="participant-title"><p>Player</p></div>
-            <div class="participant-score"><p>3</p></div>
+            <img src="images/arrow.png" class="arrow-default-style" id="player-arrow"/>
+            <div class="participant-title"><p id="player-title">Player</p></div>
+            <div class="participant-score" id="player-score-number"><p></p></div>
         </div>
         <section id="board">
             <div class="row-tile">
-               <div class="tile left-tile  draw-tile"><p>X</p></div>
-               <div class="tile middle-tile draw-tile"><p>O</p></div>
-               <div class="tile right-tile draw-tile"><p>X</p></div>
+               <div class="tile left-tile  default-tile"><p class="symbol"></p></div>
+               <div class="tile middle-tile default-tile"><p class="symbol"></p></div>
+               <div class="tile right-tile  default-tile"><p class="symbol"></p></div>
             </div>
             <div class="row-tile">
-               <div class="tile left-tile"><p>X</p></div>
-               <div class="tile middle-tile"><p>O</p></div>
-               <div class="tile right-tile"><p>X</p></div>
+               <div class="tile left-tile default-tile"><p class="symbol"></p></div>
+               <div class="tile middle-tile default-tile"><p class="symbol"></p></div>
+               <div class="tile right-tile default-tile"><p class="symbol"></p></div>
             </div>
             <div class="row-tile">
-               <div class="tile left-tile"><p>O</p></div>
-               <div class="tile middle-tile"><p>O</p></div>
-               <div class="tile right-tile"><p>X</p></div>
+               <div class="tile left-tile default-tile"><p class="symbol"></p></div>
+               <div class="tile middle-tile default-tile"><p class="symbol"></p></div>
+               <div class="tile right-tile default-tile"><p class="symbol"></p></div>
             </div>
         </section>
         <div class="score-result" id="computer-score">
-            <div class="participant-title"><p>Computer</p></div>
-            <div class="participant-score"><p>10</p></div>
+            <img src="images/arrow.png"   class="arrow-default-style" id="computer-arrow"/>
+            <div class="participant-title"><p id="computer-title">Computer</p></div>
+            <div class="participant-score" id="computer-score-number"><p></p></div>
         </div>
     </section>
-
 </main>
-
+<div id="make-choice">
+    <p id="make-choice-title">Make a choice:</p>
+    <div id="game-choices">
+        <p id="choice-zero" class="default-choice-style">O</p>
+        <p id="choice-x" class="default-choice-style">X</p>
+    </div>
+</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="js/basic.js"></script>
 </body>
