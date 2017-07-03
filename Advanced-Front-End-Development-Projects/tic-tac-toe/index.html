@@ -10,11 +10,11 @@
         <div class="score-result" id="player-score">
             <img src="images/arrow.png" class="arrow-default-style" id="player-arrow"/>
             <div class="participant-title"><p id="player-title">Player</p></div>
-            <div class="participant-score" id="player-score-number"><p></p></div>
+            <div class="participant-score"><p id="player-score-number">2</p></div>
         </div>
         <section id="board">
             <div class="row-tile">
-               <div class="tile left-tile  default-tile"><p class="symbol"></p></div>
+               <div class="tile left-tile  default-tile"><p class="symbol">X</p></div>
                <div class="tile middle-tile default-tile"><p class="symbol"></p></div>
                <div class="tile right-tile  default-tile"><p class="symbol"></p></div>
             </div>
@@ -32,15 +32,20 @@
         <div class="score-result" id="computer-score">
             <img src="images/arrow.png"   class="arrow-default-style" id="computer-arrow"/>
             <div class="participant-title"><p id="computer-title">Computer</p></div>
-            <div class="participant-score" id="computer-score-number"><p></p></div>
+            <div class="participant-score" ><p id="computer-score-number"></p></div>
         </div>
     </section>
 </main>
-<div id="make-choice">
-    <p id="make-choice-title">Make a choice:</p>
-    <div id="game-choices">
-        <p id="choice-zero" class="default-choice-style">O</p>
-        <p id="choice-x" class="default-choice-style">X</p>
+<div id="messages">
+    <div id="present-game-result">
+         <p id="game-result"></p>
+    </div>
+    <div id="present-choices">
+        <p id="make-choice-title">Make a choice:</p>
+        <div id="make-choices">
+            <p id="choice-zero" class="default-choice-style">O</p>
+            <p id="choice-x" class="default-choice-style">X</p>
+        </div>
     </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

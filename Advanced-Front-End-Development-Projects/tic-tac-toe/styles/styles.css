@@ -83,6 +83,8 @@ h1 {
     margin-top:-7px;
     color:#2b2a2a;
     font-family: "Acme", sans-serif;
+    position:relative;
+    top:-60px;
 }
 /*******************************
     TILES
@@ -131,8 +133,11 @@ h1 {
     border-color: #13f92e;
 }
 
+/*******************************
+    MESSAGES
+********************************/
 
-#make-choice {
+#messages {
     display:none;
     flex-direction:column;
     align-items: center;
@@ -145,10 +150,25 @@ h1 {
 
 }
 
-#make-choice-title {
-    display: inherit;
-    justify-content: inherit;
-    align-items: inherit;
+#present-choices,
+#present-game-result{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#present-choices,
+#messages,
+#present-game-result{
+    display: none;
+}
+
+#make-choice-title,#game-result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border:solid 2px black;
     width:200px;
     height:50px;
@@ -159,13 +179,17 @@ h1 {
     background-color: white;
 }
 
-#game-choices {
+#game-result {
+    width:250px;
+}
+
+#make-choices {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
-#make-choice #game-choices p{
+#messages #make-choices p{
     display: inherit;
     justify-content: inherit;
     align-items: inherit;
@@ -177,6 +201,7 @@ h1 {
     background-color: #fff;
     font-family:"Acme", sans-serif;
     cursor:pointer;
+
 }
 
 .default-choice-style {
