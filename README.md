@@ -30,13 +30,15 @@ HTML5 and CSS (5 hours)
 - [x] Intermediate Front End Development Projects (100 hours)  
 - [x] Intermediate Algorithm Scripting(50 hours)
 - [ ] Advanced Front End Development Projects(150 hours)
-    - [x] Build a JavaScript Calculator Incomplete  
-    - [x] Build a Pomodoro Clock Incomplete     
-    - [ ] Build a Tic Tac Toe Game Incomplete    
+    - [x] Build a JavaScript Calculator  
+    - [x] Build a Pomodoro Clock   
+    - [ ] Build a Tic Tac Toe Game Incomplete  (under development)  
     - [ ] Build a Simon Game Incomplete   
 
 - [ ] Claim Your Front End Development Certificate
 
 
+## Last created project - Pomodoro Clock ##
 
 
+![](Advanced-Front-End-Development-Projects/pomodoro-clock/images/pomodoro-preview.PNG)
