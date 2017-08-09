@@ -42,6 +42,21 @@ function palindrome(str) {
 }
 
 
+//second solution
+
+
+function isPalindrome(str) {
+  // Good luck!
+  str = str.toLowerCase().replace(/[\W_]/g,"");
+  return str === str.split("").reverse("").join("");
+}
+
+
+
+isPalindrome("eye");
+
+
+
 
 
 
