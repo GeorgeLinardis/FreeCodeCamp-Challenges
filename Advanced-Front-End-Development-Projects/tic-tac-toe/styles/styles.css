@@ -1,17 +1,32 @@
 /* Molle and Acme font */
 @import url('https://fonts.googleapis.com/css?family=Molle:400i,Acme');
 
-@score-card: yellow;
+//fonts
+@basic-font: "Acme", sans-serif;
+@title-font: 'Molle', cursive;
+
+// colors
+@app-background: lightgreen;
+@card-title: red;
+@error: #ff3333;
+@board-color: #2b2a2a;
+@neutral: #838383;
 @question: #2b2a2a;
+@score-card: yellow;
+@success: lightgreen;
+@tile-selected: #13f92e;
+@tile-win: #00FF00;
+@white: #FFF;
+
 
 body {
-    background-color: lightgreen;
+    background-color: @app-background;
     margin: 0;
 }
 
 h1 {
     color:red;
-    font-family: 'Molle', cursive;
+    font-family: @title-font;
     margin: 10vh 0;
     text-align: center;
     font-size: 3.5em;
@@ -38,9 +53,9 @@ h1 {
     align-items: center;
     height: 300px;
     width: 300px;
-    background-color: #2b2a2a;
+    background-color: @board-color;
     border-radius: 5%;
-    position:relative;
+    position: relative;
 }
 
 
@@ -60,26 +75,25 @@ h1 {
 }
 
 .participant-title {
-    font-family: "Acme", sans-serif;
+    font-family: @basic-font;
     font-size: 15px;
-    background-color: red;
+    background-color: @card-title;
     width: 80px;
     height: 23px;
     position: relative;
     top: -28px;
     left: 10px;
     border-radius: 10px 10px 0 0 ;
-    color: white;
+    color: @white;
     text-align: center;
     padding-top: 5px;
 }
 
 .participant-score > p {
+    font-family: @basic-font;
     font-size: 50px;
     text-align: center;
     margin-top: -7px;
-    color: #2b2a2a;
-    font-family: "Acme", sans-serif;
 }
 /*******************************
     TILES
@@ -109,36 +123,69 @@ h1 {
     color: white;
     margin: 0;
     font-size: 50px;
-    font-family:"Acme", sans-serif;
+    font-family: @basic-font;
 }
 
 .win-tile {
-    background-color: #00FF00;
+    background-color: @tile-win;
 }
 
 .selected-tile {
-    border-color: #13f92e;
+    border-color: @tile-selected;
 }
 
 /*******************************
     QUESTIONS
 ********************************/
-
-.currentQuestion {
+.questions-area {
+.current-question {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 10vh;
 
-  .question {
-    color: @question;
-    font-size: 20px;
-    margin-right:10px;
+    .question {
+      color: @question;
+      font-size: 20px;
+      margin-right:10px;
+      text-align: center;
+    }
+    .answer {
+      text-align: center;
+      width:50px;
+      height: 50px;
+      font-size: 20px;
+      color: @white;
+      background-color: @board-color;
+      border: none;
+      border-radius: 10px;
+    }
+    
+    .game-option {
+      width: 150px;
+      height: 50px;
+      margin: 10px;
+      font-size: 14px;
+      color: @white;
+      background-color: @board-color;
+      border: none;
+      border-radius: 10px;
+    }
+    :hover {
+      color: @success;
+      pointer: cursor;
+    }
+   
   }
-  .answer {
+  .user-message {
+    position: fixed;
+    width: 100%;
+    padding:10px;
     text-align: center;
-    width:50px;
-    height: 50px;
     font-size: 20px;
+    bottom: 0;
+    font-family: @basic-font;
+    color: @white;
+    background-color: @error;
   }
 }

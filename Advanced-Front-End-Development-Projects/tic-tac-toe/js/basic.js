@@ -7,6 +7,7 @@ function ScoreBoard(props){
     </div>
   )
 }
+
 class Tile extends React.Component {
   render(){
    return(
@@ -14,6 +15,7 @@ class Tile extends React.Component {
      </div>
    )}
 }
+
 class GameBoard extends React.Component{
   constructor(props){
     super(props);
@@ -23,10 +25,6 @@ class GameBoard extends React.Component{
       playerTwo:{symbol:"O",type:"Computer"}
     }
     this.renderSymbol = this.renderSymbol.bind(this)
-  }
-  
-  startGame(){
-    
   }
   
   switchPlayer(){
@@ -68,9 +66,36 @@ class Game extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      gameNumber:1
+      currentGameNumber:0,
+      totalGames:0,
+      gameType:"",
+      roundEnded:false,
+      gameEnded:true,
+      messageToUser:""
     }
+    this.checkGameNumber=this.checkGameNumber.bind(this);
+    this.startGame=this.startGame.bind(this);
   }
+  startGame(e){
+    e.preventDefault();
+    this.setState(()=>({gameEnded:false}))
+  }
+  checkGameNumber(e){
+    const enteredNumber = e.target.elements.enteredGames.value; 
+    let newMessage=""; 
+    e.preventDefault();
+    if(enteredNumber>20){
+      newMessage = "Don't you have anything else to do? 20 games max please!";
+    }else if(!parseInt(enteredNumber)){
+      console.log(typeof 
+                  enteredNumber)
+      newMessage = "Only numbers please!"
+    }else {
+      this.setState(()=>({totalGames:enteredNumber}))
+    } 
+    this.setState(()=>({messageToUser:newMessage}))
+  }
+  
   render(){
     return(
       <div>
@@ -82,14 +107,39 @@ class Game extends React.Component {
             <ScoreBoard category={"Computer"} score={0}/>
           </section>
         </main>
-        <div className="question-area">
-          { this.state.gameNumber===0 &&
-            <div className="currentQuestion">
-              <h3 className="question">How many games do you wish to play:</h3>
-              <input className="answer" name="answer"></input>
+        <div className="questions-area">
+          { this.state.totalGames===0 &&
+            <div className="current-question">
+              <form onSubmit={this.checkGameNumber}>
+                <label className="question">How many games would you like to play?</label>
+                <input type="text" name="enteredGames" className="answer"/>
+              </form>
             </div>
            }
-        </div>  
+          { this.state.totalGames!==0 && this.state.gameEnded &&
+            <div className="current-question game-type">
+              <form onSubmit={this.startGame}>
+                <label className="question">Type of game?</label>
+                <input className="game-option" type="submit" value="Human Vs Computer" />
+                <input className="game-option" type="submit" value="Human vs Human" />
+              </form>
+            </div>
+           }
+          { this.state.roundEnded &&
+            <div className="current-question">
+              <h4 className="question">Game 1</h4>
+              <h4 className="ss">Player 1 turn</h4>
+            </div>
+           }
+           { this.state.gameEnded &&
+            <div className="current-question">
+              <h1>result</h1>
+            </div>
+           }
+          { this.state.messageToUser.length>0 && 
+            <p className="user-message">{this.state.messageToUser}</p>
+          }  
+        </div> 
       </div>
     )
   }
