@@ -1,28 +1,28 @@
+/* Molle and Acme font */
 @import url('https://fonts.googleapis.com/css?family=Molle:400i,Acme');
+
+@score-card: yellow;
+@question: #2b2a2a;
 
 body {
     background-color: lightgreen;
     margin: 0;
 }
 
-main {
-    height:90vh;
-}
-
 h1 {
     color:red;
     font-family: 'Molle', cursive;
-    margin-top:10vh;
+    margin: 10vh 0;
     text-align: center;
     font-size: 3.5em;
 }
 
 #game-area {
-    background-color:darkorange;
-    height:200px;
-    position:relative;
-    top:10%;
-    display:flex;
+    background-color: darkorange;
+    height: 200px;
+    position: relative;
+    top: 10%;
+    display: flex;
     justify-content: space-around;
     align-items: center;
 
@@ -31,60 +31,55 @@ h1 {
 /*******************************
     BOARD
 ********************************/
-
 #board {
-    display:flex;
+    display: flex;
     flex-direction: column;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
-    height:300px;
-    width:300px;
+    height: 300px;
+    width: 300px;
     background-color: #2b2a2a;
-    border-radius:5%;
+    border-radius: 5%;
+    position:relative;
 }
+
 
 /*******************************
     SCORES
 ********************************/
 
 .score-result {
-    background-color:yellow;
-    height:100px;
-    width:100px;
+    background-color: @score-card;
+    height: 100px;
+    width: 100px;
     border-radius: 5%;
 }
 
 .score-result p {
-    margin:0;
+    margin: 0;
 }
 
 .participant-title {
-    font-family:"Acme", sans-serif;
-    font-size:15px;
-    background-color:red;
-    width:80px;
-    height:23px;
-    position:relative;
-    top:-88px;
-    left:10px;
-    border-radius:10px 10px 0 0 ;
-    color:white;
+    font-family: "Acme", sans-serif;
+    font-size: 15px;
+    background-color: red;
+    width: 80px;
+    height: 23px;
+    position: relative;
+    top: -28px;
+    left: 10px;
+    border-radius: 10px 10px 0 0 ;
+    color: white;
     text-align: center;
-    padding-top:5px;
+    padding-top: 5px;
 }
 
-.active-player {
-    background-color: chartreuse;
-
-}
-.participant-score p {
+.participant-score > p {
     font-size: 50px;
     text-align: center;
-    margin-top:-7px;
-    color:#2b2a2a;
+    margin-top: -7px;
+    color: #2b2a2a;
     font-family: "Acme", sans-serif;
-    position:relative;
-    top:-60px;
 }
 /*******************************
     TILES
@@ -92,32 +87,28 @@ h1 {
 
 .row-tile {
     border-radius: 5%;
-    width:270px;
-    height:80px;
+    width: 270px;
+    height: 80px;
     margin: 5px;
-    display:flex;
+    display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items:center;
+    align-items: center;
 
 }
 
 .tile {
-    border-radius:inherit;
-    width:75px;
-    height:75px;
-    background-color:#2b2a2a;
-    border:1px solid;
-    display:flex;
+    border-radius: inherit;
+    width: 75px;
+    height: 75px;
+    background-color: #2b2a2a;
+    border: 1px solid white;
+    display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
-}
-
-.tile p {
-    color:white;
-    margin:0;
-    font-size:50px;
+    color: white;
+    margin: 0;
+    font-size: 50px;
     font-family:"Acme", sans-serif;
 }
 
@@ -125,100 +116,29 @@ h1 {
     background-color: #00FF00;
 }
 
-.default-tile {
-    border-color: #fff;
-
-}
 .selected-tile {
     border-color: #13f92e;
 }
 
 /*******************************
-    MESSAGES
+    QUESTIONS
 ********************************/
 
-#messages {
-    display:none;
-    flex-direction:column;
-    align-items: center;
-    justify-content: center;
-    position:fixed;
-    top:200px;
-    width:100%;
-    height:250px;
-    background-color: rgba(255,255,255,0.9);
+.currentQuestion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10vh;
 
-}
-
-#present-choices,
-#present-game-result{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-
-#present-choices,
-#messages,
-#present-game-result{
-    display: none;
-}
-
-#make-choice-title,#game-result {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border:solid 2px black;
-    width:200px;
-    height:50px;
+  .question {
+    color: @question;
+    font-size: 20px;
+    margin-right:10px;
+  }
+  .answer {
     text-align: center;
-    font-size:30px;
-    margin:0 0 20px 0;
-    color:black;
-    background-color: white;
-}
-
-#game-result {
-    width:250px;
-}
-
-#make-choices {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-#messages #make-choices p{
-    display: inherit;
-    justify-content: inherit;
-    align-items: inherit;
-    width:100px;
-    height:100px;
-    margin:0 0 0 10px;
-    border-radius:5%;
-    font-size:50px;
-    background-color: #fff;
-    font-family:"Acme", sans-serif;
-    cursor:pointer;
-
-}
-
-.default-choice-style {
-    color:black;
-    border:2px solid black;
-}
-
-.selected-choice-style {
-    color:black;
-    border:2px solid limegreen;
-}
-
-
-.arrow-default-style {
-    position:relative;
     width:50px;
-    height:60px;
-    top:-120px;
-    right:-20px;
+    height: 50px;
+    font-size: 20px;
+  }
 }

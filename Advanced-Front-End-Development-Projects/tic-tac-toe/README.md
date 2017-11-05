@@ -1,6 +1,7 @@
 
 freeCodeCamp  Tic Tac Toe game
 -----------------------------------
+(File structure is that of a Codepen)
 
 Through this challenge I created a Tic Tac Toe game.
 

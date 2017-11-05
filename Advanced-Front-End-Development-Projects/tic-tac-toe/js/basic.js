@@ -1,54 +1,98 @@
-$('document').ready(function(){
-    "use strict";
-    let playerSymbol="X",computerSymbol="O",
-        playerScore=0,computerScore = 0,turn="player";
 
-   class Game {
+function ScoreBoard(props){
+  return(
+    <div className="score-result">
+      <div className="participant-title"><p>{props.category}</p></div>
+      <div className="participant-score"><p>{props.score}</p></div>
+    </div>
+  )
+}
+class Tile extends React.Component {
+  render(){
+   return(
+     <div className="tile" onClick={this.props.renderSymbol}>
+     </div>
+   )}
+}
+class GameBoard extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      currentPlayer : "playerOne",
+      playerOne:{symbol:"X",type:"Human"},
+      playerTwo:{symbol:"O",type:"Computer"}
+    }
+    this.renderSymbol = this.renderSymbol.bind(this)
+  }
+  
+  startGame(){
+    
+  }
+  
+  switchPlayer(){
+    const currentPlayer = this.state.currentPlayer;
+    const nextPlayer = currentPlayer==="playerOne"?"playerTwo":"playerOne";
+    this.setState(()=>({currentPlayer:nextPlayer}))
+  }
+  
+  renderSymbol(e){
+    const currentPlayer = this.state.currentPlayer;
+    e.target.innerText=this.state[currentPlayer].symbol;
+    this.switchPlayer()
+  }
+  
+  render(){
+    return(
+      <section id="board">
+        <div className="row-tile">
+          <Tile renderSymbol={this.renderSymbol} />
+          <Tile renderSymbol={this.renderSymbol} />
+          <Tile renderSymbol={this.renderSymbol}/>
+        </div>
+        <div className="row-tile">
+          <Tile renderSymbol={this.renderSymbol}/>
+          <Tile renderSymbol={this.renderSymbol}/>
+          <Tile renderSymbol={this.renderSymbol}/>
+        </div>
+        <div className="row-tile">
+          <Tile renderSymbol={this.renderSymbol}/>
+          <Tile renderSymbol={this.renderSymbol}/>
+          <Tile renderSymbol={this.renderSymbol}/>
+        </div>
+      </section>
+    )
+  }
+}
 
-       constructor(playerSymbol,computerSymbol){
-           this.tileSymbols = $(".symbol");
-           this.playerScore = $("#player-score-number")[0];
-           this.computerScore = $("#computer-score-number")[0];
-       }
-
-       initializeGame(){
-           console.log("initialize game!");
-           //set all symbols to ""
-           for(let i=0;i<this.tileSymbols.length;i++){
-               this.tileSymbols[i].innerText="";
+class Game extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      gameNumber:1
+    }
+  }
+  render(){
+    return(
+      <div>
+        <main>
+          <h1>Tic Tac Toe</h1>
+          <section id="game-area">
+            <ScoreBoard category={"Player"} score={0}/>
+            <GameBoard/>
+            <ScoreBoard category={"Computer"} score={0}/>
+          </section>
+        </main>
+        <div className="question-area">
+          { this.state.gameNumber===0 &&
+            <div className="currentQuestion">
+              <h3 className="question">How many games do you wish to play:</h3>
+              <input className="answer" name="answer"></input>
+            </div>
            }
-       }
+        </div>  
+      </div>
+    )
+  }
+}
 
-       playerChooseSymbol(){
-           $("#messages").css("display","flex");
-           $("#present-choices").css("display","flex");
-       }
-
-       showGameResult(result){
-           $("#messages").css("display","flex");
-           $("#present-game-result").css("display","flex");
-           $("#game-result")[0].innerText = result;
-       }
-
-       messageDissapear(){
-           $("#messages").css("display","none");
-       }
-
-       resetGame (){
-           console.log("reset game!");
-           this.playerScore.innerText=0;
-           this.computerScore.innerText=0;
-           this.playerChooseSymbol();
-           this.initializeGame();
-
-       }
-
-   }
-
-  let myApp = new Game;
-
-
-   myApp.resetGame();
-
-
-});
+ReactDOM.render(<Game />, document.getElementById("app"))
