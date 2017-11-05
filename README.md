@@ -38,7 +38,7 @@ HTML5 and CSS (5 hours)
 - [ ] Claim Your Front End Development Certificate
 
 
-## Last created project - Pomodoro Clock ##
+## Last project - Tic Tac Toe Game ##
 
 
-![](Advanced-Front-End-Development-Projects/pomodoro-clock/images/pomodoro-preview.PNG)
+![](Advanced-Front-End-Development-Projects/tic-tac-toe/images/ticTacToe-preview.PNG)
