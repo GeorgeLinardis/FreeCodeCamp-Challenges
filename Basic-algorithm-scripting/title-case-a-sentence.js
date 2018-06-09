@@ -11,21 +11,20 @@
  * @return {string}
  *        returns string with capitalized first letters
  */
-"use strict";
 
 function titleCase(str) {
 
-    function capitalize(word) {
-        return word.charAt(0).toUpperCase()+word.slice(1,word.length);
-    }
+  function capitalize(word) {
+    return word.charAt(0).toUpperCase() + word.slice(1,word.length);
+  }
 
-    let results=[];
-    str.toLowerCase().split(" ").forEach(function(element){
-        element = capitalize(element);
-        results.push(element);
-    });
+  let results=[];
+  str.toLowerCase().split(" ").forEach(function(element) {
+      element = capitalize(element);
+      results.push(element);
+  });
 
-    return results.join(" ");
+  return results.join(" ");
 }
 
 titleCase("sHoRt AnD sToUt");

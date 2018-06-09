@@ -16,8 +16,6 @@
  *        returns boolean depending if target exists on str or not
  */
 
-"use strict";
-
 function confirmEnding(str, target) {
     return str.slice(str.length-target.length) === target;
 

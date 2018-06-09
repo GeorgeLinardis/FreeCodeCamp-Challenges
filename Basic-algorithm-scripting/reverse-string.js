@@ -12,11 +12,8 @@
  *        returns the reversed string
  */
 
-"use strict";
-
 function reverseString(str) {
-    let temp=(str.split("")).reverse();
-    return temp.join("");
+    return str.split("").reverse().join("");
 }
 
 reverseString("hello"); //olleh

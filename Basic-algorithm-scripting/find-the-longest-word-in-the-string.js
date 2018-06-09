@@ -11,17 +11,13 @@
  * @return {string}
  *        returns longest word
  */
-"use strict";
 
-function findLongestWord(str) {
-    let temp=0;
-    str.split(" ").forEach(function(word){
-        if(temp<word.length){
-            temp = word.length;
-        }
-    });
-
-    return temp;
+function findLongestWordLength(str) {
+  let temp=0;
+  str.split(" ").forEach((word) => {
+      temp = temp < word.length ? word.length : temp; 
+  });
+	return temp;
 }
 
 

@@ -15,20 +15,15 @@
  *
  */
 
-"use strict";
-
-
 function repeatStringNumTimes(str, num) {
-
-    if(num<0){
-        return "";
-    }else {
-        let results = "";
-        for (let i=0; i < num; i++) {
-            results += str;
-        }
-        return results;
-    }
+  let results = "";
+  if (num < 0) {
+      return results;
+  }
+  for (let i=0; i < num; i++) {
+    results += str;
+  }
+  return results;
 }
 
 repeatStringNumTimes("abc", 3); //abcabcabc

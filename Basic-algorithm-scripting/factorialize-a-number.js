@@ -18,26 +18,19 @@
  *
  */
 
-"use strict";
-
 function factorialize(num) {
-    let result=1;
-    if(num>=0){
-
-        if (num===0){
-            return 1;
-        }else{
-
-            for(let i=1;i<=num;i++){
-                result*= i;
-            }
-        }return result;
-    }
-    else {
-        // alert("Sorry this factorialize function allows only numbers greater or equal to zero");
+  let result = 1;
+  if ( num >= 0 ) {
+    if ( num===0 ){
+      return result;
     }
 
-
+    for (let i=1; i<=num; i++){
+        result*= i;
+    }
+    return result;
+  }
+  // alert("Sorry this factorialize function allows only numbers greater or equal to zero");
 }
 
-console.log(factorialize(5));
+factorialize(5);

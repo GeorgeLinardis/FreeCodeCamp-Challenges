@@ -14,17 +14,15 @@
  *
  */
 
-"use strict";
-
 function findElement(arr, func) {
-    let num = undefined;
-    for(let i=0;i<arr.length;i++){
-        num = func(arr[i])?arr[i]:undefined;
-        if (num){
-            return num;
-        }
-    };
-    return num;
+  let num;
+  for(let i=0; i < arr.length; i++) {
+      num = func(arr[i]) && arr[i];
+      if (num){
+          return num;
+      }
+  };
+  return;
 }
 
 findElement([1, 3, 5, 8, 9, 10], function(num) { return num % 2 === 0; });
