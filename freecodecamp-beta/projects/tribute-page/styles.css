@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css?family=Gaegu|Nanum+Pen+Script');
+
+@h1-small: 34px;
+@h1-large: 55px;
+
+@font-size-large: 30px;
+@font-size-medium: 24px;
+@font-size-small: 18px;
+
+@font-family-base: "Nanum Pen Script", cursive;
+
+@carrot-orange: #F5812A;
+@carrot-green: #01A755;
+@white: #FFF;
+
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+#main {
+  height: auto;
+  min-width: 400px;
+  background-color: #f9eaf9;
+  display: flex;
+  flex-direction: column;
+}
+
+.tribute-info {
+  width: 70%;
+  min-width: 300px;
+  align-self: flex-end;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  h1 {
+    font-family: 'Gaegu', cursive;
+    font-size: @h1-large;
+    color: @carrot-orange;
+  }
+  p {
+    font-size: @font-size-large;
+    font-family: 'Nanum Pen Script', cursive;
+    font-weight: 500;
+  }
+}
+
+#tribute-link {
+  text-decoration: none;
+  color: @carrot-orange;
+  font-size: @font-size-large;
+  font-weight: 600;
+  font-family: @font-family-base;
+  &:hover {
+    color: @carrot-green;
+  }
+}
+
+.img-section {
+  width: 50%;
+  height: auto;
+  position: relative;
+  padding-top: 100px;
+}
+#image {
+  padding-left: 30px;
+  width: 70%;
+  max-width: 500px;
+  display: block;
+  margin: auto;
+}
+#img-caption {
+  padding: 10px;
+  text-align: center;
+}
+
+.dialog {
+  .base {
+    position: absolute;
+    width: 200px;
+    height: 120px;
+    background-color: @white;
+    border-radius: 70px;
+    left: 50%;
+    top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+      z-index: 2;
+      color: @carrot-orange;
+      font-weight: 600;
+      font-family: @font-family-base;
+      font-size: @font-size-medium;
+    }
+  }
+  .direction {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: @white;
+    bottom: -8px;
+    left: 6px;
+    border-radius: 100% 0%;
+  }
+}
+
+.carrot {
+  position: absolute;
+  width: 50px;
+  &.carrot1 {
+    top: 150px;
+    left: 10%;
+  }
+  &.carrot2 {
+    top: 250px;
+    left: 30%;
+    transform: rotate(-145deg);
+  }
+  &.carrot3 {
+    top: 329px;
+    left: 12%;
+    transform: rotate(-37deg);
+  }
+  &.carrot4 {
+    top: 450px;
+    left: 20%;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .carrots {
+    display: none;
+  }
+  .tribute-info {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .tribute-info {
+    h1 {
+      font-size: @h1-small;
+    }
+    p {
+      font-size: @font-size-small;
+      font-weight: 500;
+    }
+  }
+  #image {
+    width: 80%;
+  }
+  .dialog .base {
+    top: 30px;
+    left: 180px;
+  }
+}
