@@ -19,9 +19,6 @@ Here is a preview..
 ![Wiki search](images/ticTacToe-preview.PNG)
 
 
-You can see code live in [Codepen](https://codepen.io/GeorgeLin/pen/WOzRNm).
-
-
 Keep coding and coding,
 
 George
