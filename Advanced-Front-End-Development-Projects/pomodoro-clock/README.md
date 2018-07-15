@@ -21,8 +21,6 @@ Here is a preview..
 ![Wiki search](images/pomodoro-preview.PNG)
 
 
-You can see code live in [Codepen](https://codepen.io/GeorgeLin/pen/MoOBGO).
-
 In order to run correctly a file named "js/moment.js" is missing which is actually the moment.js library
 Keep coding,
 
