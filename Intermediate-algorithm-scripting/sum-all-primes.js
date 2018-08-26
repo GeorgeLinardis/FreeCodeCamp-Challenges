@@ -13,28 +13,23 @@
  *
  */
 
-"use strict";
-
 function sumPrimes(num) {
-    let sum = 0;
-
-    function isPrime(element) {
-        let top = Math.floor(Math.sqrt(element));
-        for (let j = 1; j <= top; j+=1) {
-            if(element%j===0 && j!==1) {
-                return false;
-            }
+   let sum = 0;
+   function isPrime(element) {
+      let top = Math.floor(Math.sqrt(element));
+      for (let j = 1; j <= top; j += 1) {
+        if (element %j === 0 && j !== 1) {
+          return false;
         }
-        return true;
-    }// end of isPrime
-
-    for(let i=2; i<=num;i++){
-        if(isPrime(i)) {
-            sum += i;
-        }
+      }
+   return true;
+  }
+  for (let i = 2; i <= num; i++) {
+    if (isPrime(i)) {
+      sum += i;
     }
-
-    return sum;
+  }
+  return sum;
 }
 
 sumPrimes(10);

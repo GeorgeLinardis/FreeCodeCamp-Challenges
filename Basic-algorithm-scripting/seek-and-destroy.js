@@ -11,9 +11,6 @@
  * @return {Array}
  *
  */
-
-"use strict";
-
 function destroyer(arr) {
     // Remove all the values
     let removeValues = Array.from(arguments).slice(1);

@@ -28,7 +28,6 @@
  *
  */
 
-"use strict";
 function telephoneCheck(str) {
     /*
     * remember : \s  = for space characters (tab space)

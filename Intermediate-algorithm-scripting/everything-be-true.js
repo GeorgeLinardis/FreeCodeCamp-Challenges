@@ -11,16 +11,10 @@
  * @return {array}
  */
 
-
-
-"use strict";
-
 function truthCheck(collection, pre) {
-    let result =  collection.every(function(element){
-        return element.hasOwnProperty(pre) && Boolean(element[pre]);
-    });
-
-    return result;
+  return collection.every(function(element){
+      return element.hasOwnProperty(pre) && Boolean(element[pre]);
+  });
 }
 
 truthCheck([{"single": "yes"}], "single");

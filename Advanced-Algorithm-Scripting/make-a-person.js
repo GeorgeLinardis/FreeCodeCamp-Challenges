@@ -16,8 +16,7 @@
  * @return {string}
  *
  */
-"use strict";
-var Person = function(firstAndLast) {
+let Person = function(firstAndLast) {
     // Complete the method below and implement the others similarly
     let data = firstAndLast.split(" ");
     this.getFullName = function() {

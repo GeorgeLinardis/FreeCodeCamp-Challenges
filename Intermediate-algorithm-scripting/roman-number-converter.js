@@ -10,11 +10,7 @@
  *        return in latin form the number received
  */
 
-
-
-
 function convertToRoman(num) {
-
     let latin = {
         "1":"I",
         "2":"II",
@@ -47,17 +43,15 @@ function convertToRoman(num) {
     };
     let result = "";
     let arr = Object.keys(latin);
-
-    for(let i=arr.length;i>=0;i--){
-        if (num%arr[i]>=0){
-            let times = (num - num%arr[i])/arr[i];
-            if(times>0){
-                let convert = latin[arr[i]].repeat(times);
-                result+=convert;
+    for(let i = arr.length; i >= 0; i--){
+      if (num % arr[i] >= 0){
+        let times = (num - num % arr[i]) / arr[i];
+           if (times > 0){
+              let convert = latin[arr[i]].repeat(times);
+              result += convert;
             }
-            num = num-(times*arr[i]);
+            num = num - (times * arr[i]);
         }
-
     }
     return result;
 }

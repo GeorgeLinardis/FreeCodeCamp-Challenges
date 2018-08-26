@@ -14,16 +14,13 @@
  * @return {array}
  */
 
-"use strict";
-
-
 function dropElements(arr, func) {
-    if (arr.findIndex(func) >= 0){
-        return arr.slice(arr.findIndex(func));
-    }
-    else {
-        return arr.slice(arr.length)
-    }
+  if (arr.findIndex(func) >= 0){
+    return arr.slice(arr.findIndex(func));
+  }
+  else {
+    return arr.slice(arr.length)
+  }
 }
 
 dropElements([1, 2, 3], function(n) {return n < 3; });

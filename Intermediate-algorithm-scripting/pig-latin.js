@@ -15,21 +15,19 @@
  * @return {string}
  *
  */
-"use strict";
-
 
 function translatePigLatin(str) {
+  const reg = /[aeiou]/gi;
+  let noVowels = !str.match(reg);
 
-    let newArr = str.split("");
-    let vowels= ["a","o","e","i"];
-
-    if(vowels.indexOf(newArr[0])!==-1){
-        return str+"way";
-    }else {
-        return (vowels.indexOf(newArr[1])!==-1)?
-            (newArr.splice(1,newArr.length).concat(newArr[0]+"ay")).join("")
-           :(newArr.splice(2,newArr.length).concat(newArr[0]+newArr[1]+"ay")).join("");
-    }
-
+  if (str[0].match(reg)) {
+    return `${str}way`;
+  } else if (noVowels){
+    return `${str}ay`;
+  }
+  else {
+    var firstVowel = str.indexOf(str.match(reg)[0]);
+    return str.substr(firstVowel) + str.substr(0, firstVowel) + "ay";
+  }
 }
 console.log(translatePigLatin("glove"));

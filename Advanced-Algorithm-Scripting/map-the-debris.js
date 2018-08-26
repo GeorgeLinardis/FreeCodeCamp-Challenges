@@ -19,8 +19,6 @@
  * @return {array}
  *
  */
-"use strict";
-
 function orbitalPeriod(arr) {
     let earthsGM = 398600.4418,
         earthRadius = 6367.4447,
@@ -29,7 +27,7 @@ function orbitalPeriod(arr) {
     let getOrbPeriod = function(data) {
         let orbPeriod = Math.round(2 * Math.PI * Math.sqrt((Math.pow(earthRadius + data.avgAlt, 3)) / earthsGM));
         delete data.avgAlt;
-        
+
         data.orbitalPeriod = orbPeriod;
         return data;
     };

@@ -20,22 +20,21 @@
  *
  */
 
-"use strict";
-
 function addTogether() {
-
-    let result=0;
+    let result = 0;
     for (let keys in arguments) {
         if (typeof arguments[keys] !== "number") {
             return;
-        }else if(arguments.length===1){
+        }else if(arguments.length === 1){
             let firstParam = arguments[0];
             let addMore = function(param){
-                return (typeof param==="number")?firstParam+param:undefined;
+                return (typeof param === "number") ?
+                  firstParam + param :
+                  undefined;
             };
             return addMore;
-        }else{
-            result+=arguments[keys];
+        }else {
+          result+=arguments[keys];
         }
     }
     return result;

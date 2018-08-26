@@ -12,8 +12,6 @@
  * @return {string}
  *
  */
-"use strict";
-
 function convertHTML(str) {
     // &colon;&rpar;
 

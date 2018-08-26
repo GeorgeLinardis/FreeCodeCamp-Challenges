@@ -23,20 +23,17 @@
  * @return {boolean}
  *
  */
-"use strict";
-
 function palindrome(str) {
     // Good luck
-
     let phrase = str.toLowerCase().replace(/[\W_]/g,"");
     // \W in all non word characters
     // _ adds underscore to the characters searched for
     //g is the modifier that tells it not to stop at the first match
 
-    for (let i=0;i<phrase.length;i++){
-        if(phrase[i] !== phrase[phrase.length-1-i]){
-            return false;
-        }
+    for (let i = 0; i < phrase.length; i++){
+      if(phrase[i] !== phrase[phrase.length - 1 - i]){
+        return false;
+      }
     }
     return true;
 }
@@ -44,14 +41,11 @@ function palindrome(str) {
 
 //second solution
 
-
 function isPalindrome(str) {
   // Good luck!
   str = str.toLowerCase().replace(/[\W_]/g,"");
   return str === str.split("").reverse("").join("");
 }
-
-
 
 isPalindrome("eye");
 

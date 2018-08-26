@@ -23,17 +23,14 @@
  *
  */
 
-"use strict";
-
 function myReplace(str, before, after) {
-
     /**
      * Replaces first letter of inserted string with capital letter
      * @param word
      * @return {string}
      */
     function capitalize(word) {
-        return word.toLowerCase().replace(word.charAt(0),word.charAt(0).toUpperCase());
+      return word.toLowerCase().replace(word.charAt(0),word.charAt(0).toUpperCase());
     }
 
     /**
@@ -43,22 +40,20 @@ function myReplace(str, before, after) {
      * @param {string} afterWord
      * @return {string}
      */
-    function checkCase(beforeWord,afterWord){
+    function checkCase( beforeWord, afterWord ) {
         if (beforeWord == beforeWord.toUpperCase()){
-            return afterWord.toUpperCase();
+          return afterWord.toUpperCase();
         }
         else if (beforeWord == beforeWord.toLowerCase()){
-            return afterWord.toLowerCase();
+          return afterWord.toLowerCase();
         }
-        else{
-            return capitalize(after);
+        else {
+          return capitalize(after);
         }
     }
 
-
-    after = checkCase(before,after);
-    str = str.replace(before,after);
-
+    after = checkCase(before, after);
+    str = str.replace(before, after);
 
     return str;
 }

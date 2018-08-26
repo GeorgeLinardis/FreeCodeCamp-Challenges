@@ -20,20 +20,18 @@
  * @returns {string}
  */
 
-"use strict";
-
 function rot13(str) {
     let results = [];
     let result = str.split("");
     result.forEach(function(letter){
         let currentPosition = letter.charCodeAt();
-        if(currentPosition<65 || currentPosition>90){
+        if (currentPosition < 65 || currentPosition > 90){
             results.push(String.fromCharCode(currentPosition));
         }
-        else if (currentPosition<78){
-            results.push(String.fromCharCode(currentPosition+13));
-        }else {
-            results.push(String.fromCharCode(currentPosition-13));
+        else if (currentPosition < 78){
+            results.push(String.fromCharCode(currentPosition + 13));
+        } else {
+            results.push(String.fromCharCode(currentPosition - 13));
         }
     });
 
